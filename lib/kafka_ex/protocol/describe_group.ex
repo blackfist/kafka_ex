@@ -8,6 +8,13 @@ defmodule KafkaEx.Protocol.DescribeGroup do
       protocol_type: nil,
       protocol: nil,
       members: []
+      
+    @type t :: %Response{error_code: atom | integer,
+      group_id: binary,
+      state: binary,
+      protocol_type: binary,
+      protocol: binary,
+      members: [binary]}
   end
 
   @spec create_request(binary) :: binary
