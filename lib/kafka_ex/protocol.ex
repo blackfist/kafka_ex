@@ -9,9 +9,14 @@ defmodule KafkaEx.Protocol do
   @join_group_request        11
   @heartbeat_request         12
   @sync_group_request        14
+  @describe_group_request    15
 
   @api_version  0
 
+  defp api_key(:describe_group) do
+    @describe_group_request
+  end
+  
   defp api_key(:produce) do
     @produce_request
   end
